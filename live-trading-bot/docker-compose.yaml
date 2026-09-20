@@ -1,0 +1,102 @@
+services:
+  db:
+    image: postgres:14.17
+    container_name: postgres_fincontainer
+    environment:
+      POSTGRES_USER: dbuser
+      POSTGRES_PASSWORD: dbpassword
+      POSTGRES_DB: fin
+    ports:
+      - "5000:5432"
+    networks:
+      - fin_network
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U dbuser -d fin"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  kafka:
+    image: apache/kafka:4.3.1
+    container_name: kafka
+    environment:
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: broker,controller
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092,CONTROLLER://0.0.0.0:9093
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka:9093
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_LOG_DIRS: /var/lib/kafka/data
+      CLUSTER_ID: "MkU3OEVBNTcwNTJENDM2Qk"
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_SHARE_COORDINATOR_STATE_TOPIC_REPLICATION_FACTOR: 1
+    ports:
+      - "9092:9092"
+    volumes:
+      - kafka_data:/var/lib/kafka/data
+    networks:
+      - fin_network
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/kafka/bin/kafka-broker-api-versions.sh --bootstrap-server localhost:9092"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  producer:
+    build: ./streaming
+    container_name: producer
+    command: ["python3", "producer.py"]
+    environment:
+      ALPACA_API_KEY: ${ALPACA_API_KEY}
+      ALPACA_SECRET_KEY: ${ALPACA_SECRET_KEY}
+      PYTHONUNBUFFERED: 1
+    depends_on:
+      kafka:
+        condition: service_healthy
+
+    networks:
+      - fin_network
+
+  signal_engine:
+    build: ./streaming
+    container_name: signal_engine
+    command: ["python3", "signal_engine.py"]
+    environment:
+      PYTHONUNBUFFERED: 1
+      ALPACA_API_KEY: ${ALPACA_API_KEY}
+      ALPACA_SECRET_KEY: ${ALPACA_SECRET_KEY}
+    depends_on:
+      kafka:
+        condition: service_healthy
+    networks:
+      - fin_network      
+
+  dbt:
+    container_name: dbt_container
+    image: ghcr.io/dbt-labs/dbt-postgres:1.9.0
+    volumes: 
+      - ./dbt/my_project/my_project:/usr/app
+      - ./dbt/my_project/profiles.yml:/usr/app/profiles.yml
+    working_dir: /usr/app
+    environment:
+      - DBT_PROFILES_DIR=/usr/app
+    depends_on:
+      - db
+    networks:
+      - fin_network
+    command: debug
+
+volumes:
+  kafka_data:
+  postgres_data:
+
+networks:
+  fin_network:
+    driver: bridge
+

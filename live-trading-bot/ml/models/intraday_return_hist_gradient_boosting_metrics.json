@@ -1,0 +1,200 @@
+{
+  "model": "intraday_return_hist_gradient_boosting",
+  "target": "future_return_5m",
+  "target_horizon_minutes": 5,
+  "train_start": "2026-01-01",
+  "train_end": "2026-05-31",
+  "validation_start": "2026-06-01",
+  "validation_end": "2026-07-31",
+  "test_start": "2026-08-01",
+  "test_end": "2026-09-01",
+  "embargo_minutes": 5,
+  "round_trip_cost": 0.0006000000000000001,
+  "validation": {
+    "mae": 0.0011433204086665671,
+    "rmse": 0.0016948983613332348,
+    "r2": -0.0007275114239673197,
+    "correlation": -0.0024921863013356135,
+    "deciles": [
+      {
+        "decile": 1,
+        "trades": 24718,
+        "avg_prediction": -1.2376618398168396e-05,
+        "avg_actual_return": -5.0340943664209575e-05,
+        "median_actual_return": 0.0,
+        "win_rate": 0.45242333522129624,
+        "net_per_trade": -0.0006503409436642096
+      },
+      {
+        "decile": 2,
+        "trades": 102354,
+        "avg_prediction": 9.55760830875815e-06,
+        "avg_actual_return": -9.116305639790714e-06,
+        "median_actual_return": 0.0,
+        "win_rate": 0.48232604490298375,
+        "net_per_trade": -0.0006091163056397908
+      },
+      {
+        "decile": 3,
+        "trades": 24050,
+        "avg_prediction": 1.1342769025963602e-05,
+        "avg_actual_return": 1.7500083183559818e-05,
+        "median_actual_return": 0.0,
+        "win_rate": 0.49135135135135133,
+        "net_per_trade": -0.0005824999168164403
+      },
+      {
+        "decile": 4,
+        "trades": 10130,
+        "avg_prediction": 1.796138537907152e-05,
+        "avg_actual_return": 7.75878307189393e-05,
+        "median_actual_return": 6.914195370877341e-05,
+        "win_rate": 0.5114511352418559,
+        "net_per_trade": -0.0005224121692810607
+      },
+      {
+        "decile": 5,
+        "trades": 17734,
+        "avg_prediction": 3.49930967416756e-05,
+        "avg_actual_return": 1.4791377773623106e-06,
+        "median_actual_return": 0.0,
+        "win_rate": 0.4960527799706778,
+        "net_per_trade": -0.0005985208622226378
+      },
+      {
+        "decile": 6,
+        "trades": 19670,
+        "avg_prediction": 6.95741278399689e-05,
+        "avg_actual_return": 2.1869954338894138e-05,
+        "median_actual_return": 1.638263996484035e-05,
+        "win_rate": 0.5007625826131165,
+        "net_per_trade": -0.0005781300456611059
+      }
+    ],
+    "thresholds": [
+      {
+        "threshold": 0.0,
+        "signals": 194225,
+        "signal_pct": 0.9776951111469072,
+        "win_rate": 0.48409319088685804,
+        "avg_prediction": 1.8359998035709332e-05,
+        "mean_return": -1.3078216061732142e-06,
+        "net_per_trade": -0.0006013078216061733
+      },
+      {
+        "threshold": 0.0002,
+        "signals": 646,
+        "signal_pct": 0.0032518524484536084,
+        "win_rate": 0.4458204334365325,
+        "avg_prediction": 0.0002686246202910655,
+        "mean_return": -0.00019689244581985312,
+        "net_per_trade": -0.0007968924458198531
+      },
+      {
+        "threshold": 0.0004,
+        "signals": 33,
+        "signal_pct": 0.00016611630154639176,
+        "win_rate": 0.30303030303030304,
+        "avg_prediction": 0.000465112719941658,
+        "mean_return": -0.0013518653594604506,
+        "net_per_trade": -0.0019518653594604507
+      }
+    ],
+    "top_10_percent": {
+      "prediction_cutoff": 4.533229076179698e-05,
+      "signals": 21018,
+      "avg_return": 1.6268559384859286e-05,
+      "net_per_trade": -0.0005837314406151408,
+      "win_rate": 0.49985726520125606
+    }
+  },
+  "test": {
+    "mae": 0.0009436325516539164,
+    "rmse": 0.0014165590889012826,
+    "r2": 8.776161770229773e-05,
+    "correlation": 0.015360153639293302,
+    "deciles": [
+      {
+        "decile": 1,
+        "trades": 13223,
+        "avg_prediction": -5.939324226890666e-06,
+        "avg_actual_return": 1.3890449975746594e-05,
+        "median_actual_return": 0.0,
+        "win_rate": 0.4778794524691825,
+        "net_per_trade": -0.0005861095500242535
+      },
+      {
+        "decile": 2,
+        "trades": 62075,
+        "avg_prediction": 9.56733111576088e-06,
+        "avg_actual_return": 6.597399940199831e-06,
+        "median_actual_return": 0.0,
+        "win_rate": 0.49477245267821185,
+        "net_per_trade": -0.0005934026000598003
+      },
+      {
+        "decile": 3,
+        "trades": 10190,
+        "avg_prediction": 1.1318839478795576e-05,
+        "avg_actual_return": 3.30755688297779e-05,
+        "median_actual_return": 0.0,
+        "win_rate": 0.49990186457311087,
+        "net_per_trade": -0.0005669244311702221
+      },
+      {
+        "decile": 4,
+        "trades": 6001,
+        "avg_prediction": 2.0173508781622245e-05,
+        "avg_actual_return": 3.471672192304039e-05,
+        "median_actual_return": 4.214903900190414e-05,
+        "win_rate": 0.50591568071988,
+        "net_per_trade": -0.0005652832780769597
+      },
+      {
+        "decile": 5,
+        "trades": 10139,
+        "avg_prediction": 5.776033177871945e-05,
+        "avg_actual_return": 0.00016372955594492282,
+        "median_actual_return": 9.585102012876767e-05,
+        "win_rate": 0.5158299635072492,
+        "net_per_trade": -0.0004362704440550772
+      }
+    ],
+    "thresholds": [
+      {
+        "threshold": 0.0,
+        "signals": 99984,
+        "signal_pct": 0.9838233557680954,
+        "win_rate": 0.4952892462794047,
+        "avg_prediction": 1.4985796465127767e-05,
+        "mean_return": 2.418125202946346e-05,
+        "net_per_trade": -0.0005758187479705366
+      },
+      {
+        "threshold": 0.0002,
+        "signals": 183,
+        "signal_pct": 0.0018006848506317158,
+        "win_rate": 0.5901639344262295,
+        "avg_prediction": 0.00026702533778262126,
+        "mean_return": 0.0009132281338596289,
+        "net_per_trade": 0.0003132281338596288
+      },
+      {
+        "threshold": 0.0004,
+        "signals": 11,
+        "signal_pct": 0.00010823788719644192,
+        "win_rate": 0.45454545454545453,
+        "avg_prediction": 0.0004467997199935604,
+        "mean_return": 0.0009082594762856596,
+        "net_per_trade": 0.00030825947628565953
+      }
+    ],
+    "top_10_percent": {
+      "prediction_cutoff": 3.03085393116192e-05,
+      "signals": 10177,
+      "avg_return": 0.00016463045312730825,
+      "net_per_trade": -0.0004353695468726918,
+      "win_rate": 0.5160656382037929
+    }
+  }
+}

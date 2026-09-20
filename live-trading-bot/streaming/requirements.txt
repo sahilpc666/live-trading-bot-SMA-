@@ -1,0 +1,5 @@
+confluent-kafka
+psycopg2-binary
+alpaca-py
+scikit-learn
+joblib

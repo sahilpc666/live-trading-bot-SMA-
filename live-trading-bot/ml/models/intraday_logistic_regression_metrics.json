@@ -1,0 +1,101 @@
+{
+  "model": "intraday_logistic_regression",
+  "target": "future_return_5m > 0",
+  "target_horizon_minutes": 5,
+  "train_start": "2026-01-01",
+  "train_end": "2026-05-31",
+  "validation_start": "2026-06-01",
+  "validation_end": "2026-07-31",
+  "test_start": "2026-08-01",
+  "test_end": "2026-09-01",
+  "embargo_minutes": 5,
+  "round_trip_cost": 0.0006000000000000001,
+  "validation": {
+    "auc": 0.5229005001435557,
+    "accuracy": 0.5114519571520618,
+    "precision": 0.49658997763789303,
+    "recall": 0.6486860160505634,
+    "thresholds": [
+      {
+        "threshold": 0.5,
+        "signals": 125659,
+        "signal_pct": 0.6325457071520618,
+        "win_rate": 0.49658997763789303,
+        "mean_return": 2.5924815368750224e-06,
+        "net_per_trade": -0.0005974075184631251
+      },
+      {
+        "threshold": 0.55,
+        "signals": 1608,
+        "signal_pct": 0.008094394329896908,
+        "win_rate": 0.47823383084577115,
+        "mean_return": -0.00010874929065224939,
+        "net_per_trade": -0.0007087492906522495
+      },
+      {
+        "threshold": 0.6,
+        "signals": 59,
+        "signal_pct": 0.0002969958118556701,
+        "win_rate": 0.4576271186440678,
+        "mean_return": -0.000714907613107591,
+        "net_per_trade": -0.001314907613107591
+      },
+      {
+        "threshold": 0.65,
+        "signals": 14,
+        "signal_pct": 7.04735824742268e-05,
+        "win_rate": 0.7142857142857143,
+        "mean_return": 0.0018153242136237924,
+        "net_per_trade": 0.0012153242136237923
+      }
+    ]
+  },
+  "test": {
+    "auc": 0.5165321945275296,
+    "accuracy": 0.5101251623568308,
+    "precision": 0.5053411470707284,
+    "recall": 0.5698325130973171,
+    "thresholds": [
+      {
+        "threshold": 0.5,
+        "signals": 56823,
+        "signal_pct": 0.5591274058330381,
+        "win_rate": 0.5053411470707284,
+        "mean_return": 3.6658215190700546e-05,
+        "net_per_trade": -0.0005633417848092996
+      },
+      {
+        "threshold": 0.55,
+        "signals": 348,
+        "signal_pct": 0.0034242531585783444,
+        "win_rate": 0.5,
+        "mean_return": 5.86955682939257e-05,
+        "net_per_trade": -0.0005413044317060744
+      },
+      {
+        "threshold": 0.6,
+        "signals": 46,
+        "signal_pct": 0.0004526311646396662,
+        "win_rate": 0.43478260869565216,
+        "mean_return": -0.0009088015141836499,
+        "net_per_trade": -0.0015088015141836498
+      },
+      {
+        "threshold": 0.65,
+        "signals": 15,
+        "signal_pct": 0.00014759711890423898,
+        "win_rate": 0.4666666666666667,
+        "mean_return": -0.001967863370514955,
+        "net_per_trade": -0.0025678633705149547
+      },
+      {
+        "threshold": 0.7,
+        "signals": 1,
+        "signal_pct": 9.839807926949265e-06,
+        "win_rate": 0.0,
+        "mean_return": -0.004302209392694434,
+        "net_per_trade": -0.004902209392694434
+      }
+    ]
+  }
+}

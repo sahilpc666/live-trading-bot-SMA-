@@ -1,0 +1,469 @@
+[
+  {
+    "feature_group": "A_momentum_only",
+    "feature_count": 17,
+    "validation": {
+      "mae": 0.0011428057776019533,
+      "rmse": 0.0016940505817020957,
+      "r2": -0.00017576671830288326,
+      "correlation": 0.007090197221200454,
+      "mean_actual": -2.390936791537139e-06
+    },
+    "test": {
+      "mae": 0.0009435262371651788,
+      "rmse": 0.001416496103119933,
+      "r2": 0.00017667969240087178,
+      "correlation": 0.016657403623624285,
+      "mean_actual": 2.753804152082474e-05
+    },
+    "validation_top10": {
+      "cutoff": 3.293298569544004e-05,
+      "signals": 19915,
+      "avg_actual_return": 1.087850924646865e-05,
+      "net_after_cost": -0.0005891214907535313,
+      "win_rate": 0.49932211900577456
+    },
+    "test_top10": {
+      "cutoff": 2.394391589643319e-05,
+      "signals": 10343,
+      "avg_actual_return": 0.00018968511648475076,
+      "net_after_cost": -0.0004103148835152492,
+      "win_rate": 0.5307937735666635
+    },
+    "validation_thresholds": [
+      {
+        "threshold": 0.0,
+        "signals": 194238,
+        "signal_fraction": 0.9780559527885758,
+        "avg_actual_return": -1.8841348938634166e-06,
+        "net_after_cost": -0.0006018841348938633,
+        "win_rate": 0.4840968296625789
+      },
+      {
+        "threshold": 0.0002,
+        "signals": 198,
+        "signal_fraction": 0.0009969989325061934,
+        "avg_actual_return": -0.00031539556806221006,
+        "net_after_cost": -0.00091539556806221,
+        "win_rate": 0.5151515151515151
+      },
+      {
+        "threshold": 0.0004,
+        "signals": 72,
+        "signal_fraction": 0.0003625450663658885,
+        "avg_actual_return": 1.9421260379063392e-05,
+        "net_after_cost": -0.0005805787396209365,
+        "win_rate": 0.5555555555555556
+      }
+    ],
+    "test_thresholds": [
+      {
+        "threshold": 0.0,
+        "signals": 99956,
+        "signal_fraction": 0.9835478411461408,
+        "avg_actual_return": 2.4941580092236986e-05,
+        "net_after_cost": -0.000575058419907763,
+        "win_rate": 0.49527792228580575
+      },
+      {
+        "threshold": 0.0002,
+        "signals": 89,
+        "signal_fraction": 0.0008757429054984847,
+        "avg_actual_return": 0.0005865922372227901,
+        "net_after_cost": -1.3407762777209887e-05,
+        "win_rate": 0.5280898876404494
+      },
+      {
+        "threshold": 0.0004,
+        "signals": 22,
+        "signal_fraction": 0.00021647577439288385,
+        "avg_actual_return": 0.001201311137230457,
+        "net_after_cost": 0.0006013111372304571,
+        "win_rate": 0.6818181818181818
+      }
+    ],
+    "validation_top_bottom_spread": 2.163938640825873e-05,
+    "test_top_bottom_spread": 0.00013687438328116464,
+    "model_path": "/app/ml/models/intraday_ablation_A_momentum_only.joblib"
+  },
+  {
+    "feature_group": "B_momentum_volume",
+    "feature_count": 24,
+    "validation": {
+      "mae": 0.001142748759617224,
+      "rmse": 0.0016941102880317547,
+      "r2": -0.000246269780066255,
+      "correlation": 0.0045283917095363755,
+      "mean_actual": -2.390936791537139e-06
+    },
+    "test": {
+      "mae": 0.0009434611159960368,
+      "rmse": 0.0014164319223149153,
+      "r2": 0.00026728073491177895,
+      "correlation": 0.01885695231200538,
+      "mean_actual": 2.753804152082474e-05
+    },
+    "validation_top10": {
+      "cutoff": 4.698622737327004e-05,
+      "signals": 21372,
+      "avg_actual_return": 2.611030548446848e-05,
+      "net_after_cost": -0.0005738896945155315,
+      "win_rate": 0.5031349429159648
+    },
+    "test_top10": {
+      "cutoff": 4.247636194673945e-05,
+      "signals": 10474,
+      "avg_actual_return": 0.00015668570974822213,
+      "net_after_cost": -0.0004433142902517778,
+      "win_rate": 0.5245369486347146
+    },
+    "validation_thresholds": [
+      {
+        "threshold": 0.0,
+        "signals": 195809,
+        "signal_fraction": 0.9859664847227537,
+        "avg_actual_return": -2.1374114092643343e-06,
+        "net_after_cost": -0.0006021374114092643,
+        "win_rate": 0.4839358762876068
+      },
+      {
+        "threshold": 0.0002,
+        "signals": 306,
+        "signal_fraction": 0.0015408165320550263,
+        "avg_actual_return": -0.0001649448043935926,
+        "net_after_cost": -0.0007649448043935926,
+        "win_rate": 0.4869281045751634
+      },
+      {
+        "threshold": 0.0004,
+        "signals": 34,
+        "signal_fraction": 0.00017120183689500293,
+        "avg_actual_return": -0.0010249975669706286,
+        "net_after_cost": -0.0016249975669706284,
+        "win_rate": 0.47058823529411764
+      },
+      {
+        "threshold": 0.0006,
+        "signals": 7,
+        "signal_fraction": 3.524743700779472e-05,
+        "avg_actual_return": -0.004294863841514863,
+        "net_after_cost": -0.004894863841514863,
+        "win_rate": 0.14285714285714285
+      }
+    ],
+    "test_thresholds": [
+      {
+        "threshold": 0.0,
+        "signals": 100532,
+        "signal_fraction": 0.9892155705120637,
+        "avg_actual_return": 2.658056697668812e-05,
+        "net_after_cost": -0.0005734194330233118,
+        "win_rate": 0.495633231209963
+      },
+      {
+        "threshold": 0.0002,
+        "signals": 98,
+        "signal_fraction": 0.000964301176841028,
+        "avg_actual_return": 0.0017881010556299224,
+        "net_after_cost": 0.0011881010556299225,
+        "win_rate": 0.6326530612244898
+      },
+      {
+        "threshold": 0.0004,
+        "signals": 8,
+        "signal_fraction": 7.871846341559412e-05,
+        "avg_actual_return": 0.001568143962860244,
+        "net_after_cost": 0.000968143962860244,
+        "win_rate": 0.875
+      },
+      {
+        "threshold": 0.0006,
+        "signals": 6,
+        "signal_fraction": 5.90388475616956e-05,
+        "avg_actual_return": 0.0015448946817472147,
+        "net_after_cost": 0.0009448946817472147,
+        "win_rate": 0.8333333333333334
+      }
+    ],
+    "validation_top_bottom_spread": 4.193540061195849e-05,
+    "test_top_bottom_spread": 0.00012354159087356334,
+    "model_path": "/app/ml/models/intraday_ablation_B_momentum_volume.joblib"
+  },
+  {
+    "feature_group": "C_momentum_volume_vwap",
+    "feature_count": 27,
+    "validation": {
+      "mae": 0.0011428481021263745,
+      "rmse": 0.0016941163352260256,
+      "r2": -0.000253410630753903,
+      "correlation": 0.004597915254678306,
+      "mean_actual": -2.390936791537139e-06
+    },
+    "test": {
+      "mae": 0.0009435852409714494,
+      "rmse": 0.001416572494021436,
+      "r2": 6.883687643965963e-05,
+      "correlation": 0.013661250436135287,
+      "mean_actual": 2.753804152082474e-05
+    },
+    "validation_top10": {
+      "cutoff": 4.567646439059066e-05,
+      "signals": 20053,
+      "avg_actual_return": 2.3592116612114395e-05,
+      "net_after_cost": -0.0005764078833878855,
+      "win_rate": 0.498927841220765
+    },
+    "test_top10": {
+      "cutoff": 3.48700175667979e-05,
+      "signals": 11811,
+      "avg_actual_return": 0.00013363514513790742,
+      "net_after_cost": -0.0004663648548620925,
+      "win_rate": 0.5224790449580899
+    },
+    "validation_thresholds": [
+      {
+        "threshold": 0.0,
+        "signals": 195486,
+        "signal_fraction": 0.9843400672722512,
+        "avg_actual_return": -1.6183153594590418e-06,
+        "net_after_cost": -0.000601618315359459,
+        "win_rate": 0.48391189138864166
+      },
+      {
+        "threshold": 0.0002,
+        "signals": 362,
+        "signal_fraction": 0.001822796028117384,
+        "avg_actual_return": -0.00012792809305620638,
+        "net_after_cost": -0.0007279280930562063,
+        "win_rate": 0.505524861878453
+      },
+      {
+        "threshold": 0.0004,
+        "signals": 95,
+        "signal_fraction": 0.00047835807367721403,
+        "avg_actual_return": -0.0001576192119314152,
+        "net_after_cost": -0.0007576192119314151,
+        "win_rate": 0.5684210526315789
+      },
+      {
+        "threshold": 0.0006,
+        "signals": 4,
+        "signal_fraction": 2.0141392575882696e-05,
+        "avg_actual_return": -0.0037023063221902908,
+        "net_after_cost": -0.004302306322190291,
+        "win_rate": 0.0
+      }
+    ],
+    "test_thresholds": [
+      {
+        "threshold": 0.0,
+        "signals": 100299,
+        "signal_fraction": 0.9869228952650845,
+        "avg_actual_return": 2.6159482711751885e-05,
+        "net_after_cost": -0.0005738405172882481,
+        "win_rate": 0.4954087279035683
+      },
+      {
+        "threshold": 0.0002,
+        "signals": 195,
+        "signal_fraction": 0.0019187625457551068,
+        "avg_actual_return": 0.000416136341648682,
+        "net_after_cost": -0.00018386365835131794,
+        "win_rate": 0.48205128205128206
+      },
+      {
+        "threshold": 0.0004,
+        "signals": 94,
+        "signal_fraction": 0.000924941945133231,
+        "avg_actual_return": -0.00014780651359405235,
+        "net_after_cost": -0.0007478065135940523,
+        "win_rate": 0.43617021276595747
+      },
+      {
+        "threshold": 0.0006,
+        "signals": 1,
+        "signal_fraction": 9.839807926949265e-06,
+        "avg_actual_return": 0.004144159003752312,
+        "net_after_cost": 0.0035441590037523125,
+        "win_rate": 1.0
+      }
+    ],
+    "validation_top_bottom_spread": 2.2138153989737137e-05,
+    "test_top_bottom_spread": 7.183108993992166e-05,
+    "model_path": "/app/ml/models/intraday_ablation_C_momentum_volume_vwap.joblib"
+  },
+  {
+    "feature_group": "D_all_features",
+    "feature_count": 38,
+    "validation": {
+      "mae": 0.0011430192955469646,
+      "rmse": 0.0016945665553498648,
+      "r2": -0.0007851262447948759,
+      "correlation": -0.0025123311193284595,
+      "mean_actual": -2.390936791537139e-06
+    },
+    "test": {
+      "mae": 0.0009434687383639608,
+      "rmse": 0.0014160778532642491,
+      "r2": 0.000767029670694308,
+      "correlation": 0.031334664546048024,
+      "mean_actual": 2.753804152082474e-05
+    },
+    "validation_top10": {
+      "cutoff": 4.6705020186340996e-05,
+      "signals": 20082,
+      "avg_actual_return": 5.284042350175849e-06,
+      "net_after_cost": -0.0005947159576498241,
+      "win_rate": 0.49940244995518374
+    },
+    "test_top10": {
+      "cutoff": 3.219721686338372e-05,
+      "signals": 10610,
+      "avg_actual_return": 0.00016155468516064497,
+      "net_after_cost": -0.000438445314839355,
+      "win_rate": 0.5136663524976437
+    },
+    "validation_thresholds": [
+      {
+        "threshold": 0.0,
+        "signals": 195014,
+        "signal_fraction": 0.981963382948297,
+        "avg_actual_return": -7.386764140057936e-07,
+        "net_after_cost": -0.0006007386764140057,
+        "win_rate": 0.48405242700524065
+      },
+      {
+        "threshold": 0.0002,
+        "signals": 847,
+        "signal_fraction": 0.004264939877943161,
+        "avg_actual_return": -8.458047878830584e-05,
+        "net_after_cost": -0.0006845804787883058,
+        "win_rate": 0.46635182998819363
+      },
+      {
+        "threshold": 0.0004,
+        "signals": 89,
+        "signal_fraction": 0.00044814598481339,
+        "avg_actual_return": 0.00033743908146652697,
+        "net_after_cost": -0.000262560918533473,
+        "win_rate": 0.43820224719101125
+      }
+    ],
+    "test_thresholds": [
+      {
+        "threshold": 0.0,
+        "signals": 100451,
+        "signal_fraction": 0.9884185460699807,
+        "avg_actual_return": 2.8423601783549925e-05,
+        "net_after_cost": -0.00057157639821645,
+        "win_rate": 0.495744193686474
+      },
+      {
+        "threshold": 0.0002,
+        "signals": 117,
+        "signal_fraction": 0.001151257527453064,
+        "avg_actual_return": 0.0005006637351019987,
+        "net_after_cost": -9.933626489800121e-05,
+        "win_rate": 0.5384615384615384
+      },
+      {
+        "threshold": 0.0004,
+        "signals": 3,
+        "signal_fraction": 2.95194237808478e-05,
+        "avg_actual_return": 0.0039346935610963625,
+        "net_after_cost": 0.0033346935610963626,
+        "win_rate": 1.0
+      }
+    ],
+    "validation_top_bottom_spread": 2.871932300578697e-05,
+    "test_top_bottom_spread": 0.00017071347284643325,
+    "model_path": "/app/ml/models/intraday_ablation_D_all_features.joblib"
+  },
+  {
+    "feature_group": "E_all_without_symbol",
+    "feature_count": 26,
+    "validation": {
+      "mae": 0.0011430271834186943,
+      "rmse": 0.0016946501061330418,
+      "r2": -0.0008838163106208441,
+      "correlation": -0.0038257183970484103,
+      "mean_actual": -2.390936791537139e-06
+    },
+    "test": {
+      "mae": 0.000943509356827826,
+      "rmse": 0.001416106654997953,
+      "r2": 0.0007263822803984521,
+      "correlation": 0.03021131603951479,
+      "mean_actual": 2.753804152082474e-05
+    },
+    "validation_top10": {
+      "cutoff": 4.5809075294652e-05,
+      "signals": 20869,
+      "avg_actual_return": 2.034894998032493e-05,
+      "net_after_cost": -0.0005796510500196751,
+      "win_rate": 0.5018448416311275
+    },
+    "test_top10": {
+      "cutoff": 3.314230714942106e-05,
+      "signals": 10299,
+      "avg_actual_return": 0.00015223994018740992,
+      "net_after_cost": -0.00044776005981259006,
+      "win_rate": 0.5141275852024468
+    },
+    "validation_thresholds": [
+      {
+        "threshold": 0.0,
+        "signals": 194944,
+        "signal_fraction": 0.9816109085782191,
+        "avg_actual_return": -8.708926581399249e-07,
+        "net_after_cost": -0.0006008708926581399,
+        "win_rate": 0.48411851608667106
+      },
+      {
+        "threshold": 0.0002,
+        "signals": 934,
+        "signal_fraction": 0.004703015166468609,
+        "avg_actual_return": -0.00015567621382972125,
+        "net_after_cost": -0.0007556762138297212,
+        "win_rate": 0.4582441113490364
+      },
+      {
+        "threshold": 0.0004,
+        "signals": 144,
+        "signal_fraction": 0.000725090132731777,
+        "avg_actual_return": 1.2607501706022533e-05,
+        "net_after_cost": -0.0005873924982939774,
+        "win_rate": 0.4375
+      }
+    ],
+    "test_thresholds": [
+      {
+        "threshold": 0.0,
+        "signals": 100341,
+        "signal_fraction": 0.9873361671980163,
+        "avg_actual_return": 2.8211990728951973e-05,
+        "net_after_cost": -0.000571788009271048,
+        "win_rate": 0.4956398680499497
+      },
+      {
+        "threshold": 0.0002,
+        "signals": 81,
+        "signal_fraction": 0.0007970244420828905,
+        "avg_actual_return": 0.0006691248623642167,
+        "net_after_cost": 6.912486236421676e-05,
+        "win_rate": 0.49382716049382713
+      },
+      {
+        "threshold": 0.0004,
+        "signals": 5,
+        "signal_fraction": 4.919903963474633e-05,
+        "avg_actual_return": 0.003201702317974986,
+        "net_after_cost": 0.002601702317974986,
+        "win_rate": 1.0
+      }
+    ],
+    "validation_top_bottom_spread": 3.3175746305795225e-05,
+    "test_top_bottom_spread": 0.00014318824996108686,
+    "model_path": "/app/ml/models/intraday_ablation_E_all_without_symbol.joblib"
+  }
+]
