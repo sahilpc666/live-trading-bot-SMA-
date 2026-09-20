@@ -27,7 +27,10 @@ The platform streams live market quotes from Alpaca into Kafka, generates tradin
 
 
 
-
+                    ┌── Historical data												
+                    │       ↓
+                    │    ML Model
+                    │       ↓
 Alpaca ──► kafka ──► Signal Generator
               │              │
               │              ▼
@@ -41,7 +44,6 @@ Alpaca ──► kafka ──► Signal Generator
               │              │
               └──────────────┘
                      fills/orders
-
 
 
 
